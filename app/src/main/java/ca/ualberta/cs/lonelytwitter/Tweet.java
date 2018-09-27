@@ -9,6 +9,10 @@ public abstract class Tweet {
     public Tweet(String message){
 
     }
+    public Tweet(){
+        this.message = "";
+        this.date = new Date();
+    }
     public void setMessage(String message) throws ToLongTweetException{
         if (message.length()>140){
             throw new ToLongTweetException();
@@ -29,4 +33,8 @@ public abstract class Tweet {
     }
 
     public abstract Boolean isImoprtant();
+
+    public String toString(){
+        return this.date.toString() + " | " + this.message;
+    }
 }

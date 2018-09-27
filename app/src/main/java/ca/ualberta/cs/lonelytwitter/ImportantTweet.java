@@ -5,6 +5,9 @@ public class ImportantTweet extends Tweet {
         super(message);
     }
 
+    public ImportantTweet(){
+        super();
+    }
     @Override
     public Boolean isImoprtant() {
         return Boolean.TRUE;
