@@ -46,12 +46,9 @@ public class LonelyTwitterActivity extends Activity {
 
 			public void onClick(View v) {
 				String text = bodyText.getText().toString();
-				ImportantTweet newTweet = new ImportantTweet();
+				ImportantTweet newTweet = new ImportantTweet(text);
 				tweets.add(newTweet);
-				try{
-					newTweet.setMessage(text);
 
-				}catch (ToLongTweetException e){}
 
 				adapter.notifyDataSetChanged();
 				saveInFile();
